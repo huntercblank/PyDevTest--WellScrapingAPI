@@ -4,7 +4,7 @@ This repo contains all information related to a SynMax programming take-home ass
 
 # Breakdown
 ## Part 1
-All code for part 1 is located in the pyDevTest.py file.
+All code for part 1 is located in the devTest.py file.
 > Results from web scraping by provided API list can be found in pyTestWellData.db in table api_well_data
 
 The python file contains 2 versions of a similar code to scrape Well information by API number(s). These are a sequential and an asynchronous version.
