@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- FlaskApp</title>
+    <style>
+        .post {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Well API Tools</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} 
+		<h1>List of Well API Tools</h1>
+		<form action="{{url_for('getWellData')}}" method="GET">
+				<button type="submit" class="btn btn-success">
+					1. Get Well Data by API</button>
+		</form>
+		<form action="{{url_for('getWellsbyLocation')}}" method="GET">
+				<button type="submit" class="btn btn-success">
+					2. List of Well APIs by Coordinate List</button>
+		</form>
+		{% endblock %}
+    </div>
+</body>
+</html>

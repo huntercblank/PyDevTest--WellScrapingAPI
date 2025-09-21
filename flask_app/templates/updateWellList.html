@@ -1,0 +1,29 @@
+<html lang="en">
+	<head>
+		<h1>List of Well APIs</h1>
+	</head>
+	<style>
+		table, th, td {
+			border:1px solid black;
+			}
+			</style>
+	<body>
+		<table style="width:100%">
+			<tr>
+				<th>API</th>
+				<th>Latitude</th>
+				<th>Longitude</th>
+				<th>CRS</th>
+			</tr>
+			{% for post in posts %}
+				<tr>
+					<td>{{ post['API'] }}</td>
+					<td>{{ post['Latitude'] }}</td>
+					<td>{{ post['Longitude'] }}</td>
+					<td>{{ post['CRS'] }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
+

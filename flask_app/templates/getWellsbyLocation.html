@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<h1>Get Well Data by API</h1>
+</head>
+
+<body>
+	<form action="{{url_for('getWellsbyLocation')}}" method="POST">
+		<label for="title">Title</label>
+		<br>
+		<input type="text" name="coordinate list"
+			   placeholder="Enter a list of coordinates "
+			   value="{{ request.form['coords'] }}"></input>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+	<p>Coordinate List Formatting: [(lat,long),(lat,long),...]</p>
+</body>
+
+
+
+<!--
+NOTE: Incomplete attempt to make table update on current page by ajax
+
+<script type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+<body>
+	<h1>Dynamic Data:</h1>
+		<div id="dynamic-data"></div>
+		<script>
+			$(document).ready(function() {
+				setInterval(function() {
+					$.ajax({
+						type: 'GET',
+						headers: {"Content-Type": "application/json"},
+						url: $SCRIPT_ROOT+"/updateWellList",
+						data: JSON.stringify({"key": "value"}),
+						dataType: "json",
+						
+						success: function(response) {
+							$('#dynamic-data').html(response);
+						}
+					});
+				}, 1000);
+			});
+		</script>
+</body>
+-->
+</html>

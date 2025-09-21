@@ -1,0 +1,63 @@
+<html lang="en">
+	<head>
+		<h1>Well Data</h1>
+	</head>
+	<style>
+		table, th, td {
+			border:1px solid black;
+			}
+			</style>
+	<body>
+		<table style="width:100%">
+			<tr>
+				<th>Operator</th>
+				<th>Status</th>
+				<th>Well Type</th>
+				<th>Work Type</th>
+				<th>Directional Status</th>
+				<th>Multi-Lateral</th>
+				<th>Mineral Owner</th>
+				<th>Surface Owner</th>
+				<th>Surface Location</th>
+				<th>GL Elevation</th>
+				<th>KB Elevation</th>
+				<th>DF Elevation</th>
+				<th>Single/Multiple Completion</th>
+				<th>Potash Waiver</th>
+				<th>Spud Date</th>
+				<th>Last Inspection</th>
+				<th>TVD</th>
+				<th>API</th>
+				<th>Latitude</th>
+				<th>Longitude</th>
+				<th>CRS</th>
+			</tr>
+			{% for post in posts %}
+				<tr>
+					<td>{{ post['Operator'] }}</td>
+					<td>{{ post['Status'] }}</td>
+					<td>{{ post['Well Type'] }}</td>
+					<td>{{ post['Work Type'] }}</td>
+					<td>{{ post['Directional Status'] }}</td>
+					<td>{{ post['Multi-Lateral'] }}</td>
+					<td>{{ post['Mineral Owner'] }}</td>
+					<td>{{ post['Surface Owner'] }}</td>
+					<td>{{ post['Surface Location'] }}</td>
+					<td>{{ post['GL Elevation'] }}</td>
+					<td>{{ post['KB Elevation'] }}</td>
+					<td>{{ post['DF Elevation'] }}</td>
+					<td>{{ post['Single/Multiple Completion'] }}</td>
+					<td>{{ post['Potash Waiver'] }}</td>
+					<td>{{ post['Spud Date'] }}</td>
+					<td>{{ post['Last Inspection'] }}</td>
+					<td>{{ post['TVD'] }}</td>
+					<td>{{ post['API'] }}</td>
+					<td>{{ post['Latitude'] }}</td>
+					<td>{{ post['Longitude'] }}</td>
+					<td>{{ post['CRS'] }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
+
